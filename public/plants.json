@@ -1,6 +1,6 @@
 [
   {
-    "plantId": "#UB705",
+    "plantId": "UB705",
     "plantName": "Split-Leaf",
     "category": "Decorative Foliage",
     "price": 28,
@@ -12,7 +12,7 @@
     "providerName": "UrbanBloom Studio"
   },
   {
-    "plantId": "#GG513",
+    "plantId": "GG513",
     "plantName": "Parlor Palm",
     "category": "Air Purifier",
     "price": 22,
@@ -24,7 +24,7 @@
     "providerName": "GreenGlow Gardens"
   },
   {
-    "plantId": "#PT947",
+    "plantId": "PT947",
     "plantName": "Guiana Chestnut",
     "category": "Lucky Plant",
     "price": 35,
@@ -36,7 +36,7 @@
     "providerName": "PlantTrove Co."
   },
   {
-    "plantId": "#VB781",
+    "plantId": "VB781",
     "plantName": "Pothos",
     "category": "Trailing Vine",
     "price": 16,
@@ -48,7 +48,7 @@
     "providerName": "VerdantBloom"
   },
   {
-    "plantId": "#LB659",
+    "plantId": "LB659",
     "plantName": "Swiss Cheese",
     "category": "Decorative Foliage",
     "price": 30,
@@ -60,7 +60,7 @@
     "providerName": "LeafBridge Nursery"
   },
   {
-    "plantId": "#FL539",
+    "plantId": "FL539",
     "plantName": "Chinese Money",
     "category": "Compact Plant",
     "price": 25,
@@ -72,7 +72,7 @@
     "providerName": "FloraLoom Botanics"
   },
   {
-    "plantId": "#GS947",
+    "plantId": "GS947",
     "plantName": "Bonnie",
     "category": "Air Purifier",
     "price": 20,
@@ -84,7 +84,7 @@
     "providerName": "GreenSpace Studio"
   },
   {
-    "plantId": "#NW525",
+    "plantId": "NW525",
     "plantName": "Maidenhair Fern",
     "category": "Ferns & Shade Plants",
     "price": 24,
@@ -96,7 +96,7 @@
     "providerName": "NatureWhisper"
   },
   {
-    "plantId": "#EV711",
+    "plantId": "EV711",
     "plantName": "Red Prayer",
     "category": "Tropical Foliage",
     "price": 27,
@@ -108,7 +108,7 @@
     "providerName": "EverVerdant Co."
   },
   {
-    "plantId": "#PH735",
+    "plantId": "PH735",
     "plantName": "Heartleaf",
     "category": "Trailing Vine",
     "price": 19,
@@ -120,7 +120,7 @@
     "providerName": "PlantHaven"
   },
   {
-    "plantId": "#GH777",
+    "plantId": "GH777",
     "plantName": "Zeylanica",
     "category": "Air Purifier",
     "price": 23,
@@ -132,7 +132,7 @@
     "providerName": "GreenHaven Botanics"
   },
   {
-    "plantId": "#SL953",
+    "plantId": "SL953",
     "plantName": "Silver Splash",
     "category": "Climbing Plant",
     "price": 29,
@@ -144,7 +144,7 @@
     "providerName": "SproutLab"
   },
   {
-    "plantId": "#LL565",
+    "plantId": "LL565",
     "plantName": "Lemon Lime",
     "category": "Colorful Foliage",
     "price": 26,
@@ -156,7 +156,7 @@
     "providerName": "LushLeaf Studio"
   },
   {
-    "plantId": "#LV869",
+    "plantId": "LV869",
     "plantName": "Lady Valentine",
     "category": "Tropical Foliage",
     "price": 32,
@@ -168,7 +168,7 @@
     "providerName": "VerdureBox"
   },
   {
-    "plantId": "#RR535",
+    "plantId": "RR535",
     "plantName": "Ripple Red",
     "category": "Decorative Foliage",
     "price": 21,
@@ -180,7 +180,7 @@
     "providerName": "RootRise Nursery"
   },
   {
-    "plantId": "#AB977",
+    "plantId": "AB977",
     "plantName": "Anthurium",
     "category": "Flowering Plant",
     "price": 34,
@@ -192,7 +192,7 @@
     "providerName": "AquaBloom Gardens"
   },
   {
-    "plantId": "#CP889",
+    "plantId": "CP889",
     "plantName": "Croton Petra",
     "category": "Colorful Foliage",
     "price": 27,
@@ -204,7 +204,7 @@
     "providerName": "ColorPlant House"
   },
   {
-    "plantId": "#AV963",
+    "plantId": "AV963",
     "plantName": "Aloe Vera",
     "category": "Succulent",
     "price": 18,
@@ -216,7 +216,7 @@
     "providerName": "VividRoot Studio"
   },
   {
-    "plantId": "#SB727",
+    "plantId": "SB727",
     "plantName": "Stromanthe",
     "category": "Tropical Foliage",
     "price": 33,
@@ -228,7 +228,7 @@
     "providerName": "SunBloom Studio"
   },
   {
-    "plantId": "#BG751",
+    "plantId": "BG751",
     "plantName": "Black Gold",
     "category": "Air Purifier",
     "price": 31,
@@ -240,7 +240,7 @@
     "providerName": "BloomGrid"
   },
   {
-    "plantId": "#HJ915",
+    "plantId": "HJ915",
     "plantName": "Hoya",
     "category": "Flowering Vine",
     "price": 24,
@@ -252,7 +252,7 @@
     "providerName": "HarmonyJungle"
   },
   {
-    "plantId": "#JM995",
+    "plantId": "JM995",
     "plantName": "Jade",
     "category": "Succulent",
     "price": 19,
@@ -264,7 +264,7 @@
     "providerName": "JoyMint Botanicals"
   },
   {
-    "plantId": "#CM803",
+    "plantId": "CM803",
     "plantName": "Croton Mammy",
     "category": "Colorful Foliage",
     "price": 28,
@@ -276,7 +276,7 @@
     "providerName": "ColorMorph Gardens"
   },
   {
-    "plantId": "#SB971",
+    "plantId": "SB971",
     "plantName": "Silver Bay",
     "category": "Air Purifier",
     "price": 26,
@@ -288,7 +288,7 @@
     "providerName": "SereneBloom Studio"
   },
   {
-    "plantId": "#LW945",
+    "plantId": "LW945",
     "plantName": "Rattlesnake",
     "category": "Tropical Foliage",
     "price": 29,
