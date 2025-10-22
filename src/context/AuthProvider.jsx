@@ -25,23 +25,29 @@ const AuthProvider = ({ children }) => {
     return () => unsubscribe();
   }, []);
   const signGoogle = () => {
+    setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
   const createEmailPass = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  const update = (cur, info) => {
-    return updateProfile(cur, info);
+  const update = (cur, displayName, photoURL) => {
+    return updateProfile(cur, { displayName, photoURL });
   };
   const signinEmailPass = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
   const signOutuser = () => {
+    setLoading(true);
     return signOut(auth);
   };
   const authInfo = {
     user,
+    setUser,
     loading,
+    setLoading,
     signGoogle,
     createEmailPass,
     update,

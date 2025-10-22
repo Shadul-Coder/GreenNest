@@ -2,27 +2,23 @@ import { use } from "react";
 import AuthContext from "../context/AuthContext";
 
 const SignIn = () => {
-  const { signinEmailPass, signGoogle } = use(AuthContext);
+  const { update, signinEmailPass, signGoogle } = use(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
     signinEmailPass(email, password)
-      .then((res) => {
-        console.log(res.user);
-      })
-      .catch((error) => {
-        console.log(error.message);
-      });
+      .then((res) => {})
+      .catch((error) => {});
   };
   const handleGoogleSignIn = () => {
     signGoogle()
       .then((res) => {
-        console.log(res.user);
+        update(res.user, res.user.displayName, res.user.photoURL)
+          .then()
+          .catch();
       })
-      .catch((error) => {
-        console.log(error.message);
-      });
+      .catch((error) => {});
   };
   return (
     <div>

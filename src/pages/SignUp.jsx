@@ -3,7 +3,7 @@ import AuthContext from "../context/AuthContext";
 
 const SignUp = () => {
   const [error, setError] = useState(null);
-  const { createEmailPass, update } = use(AuthContext);
+  const { setUser, createEmailPass, update } = use(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -12,7 +12,12 @@ const SignUp = () => {
     const password = e.target.password.value;
     createEmailPass(email, password)
       .then((res) => {
-        update(res.user, name, photo).then().catch();
+        const current = res.user;
+        update(current, name, photo)
+          .then(() => {
+            setUser({ ...current });
+          })
+          .catch();
       })
       .catch((error) => {
         setError(error.message);
