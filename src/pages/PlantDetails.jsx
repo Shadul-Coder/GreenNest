@@ -123,12 +123,12 @@ const PlantDetails = () => {
                 <button className="flex items-center btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-2xl transition-all hover:scale-101 md:text-lg md:p-6">
                   <FaShoppingCart /> Add to Cart
                 </button>
-                <a
+                <button
                   href="#consultation"
                   className="hidden sm:flex items-center btn rounded-2xl text-green-600 border border-green-600 bg-white transition-all hover:scale-101 md:text-lg md:p-6 lg:hidden xl:flex"
                 >
                   <FaCalendarAlt /> Book Consultation
-                </a>
+                </button>
               </div>
             </div>
           </div>
@@ -158,7 +158,6 @@ const PlantDetails = () => {
               </h3>
               <form
                 onSubmit={handleSubmit}
-                id="consultation"
                 className="flex flex-col gap-1.5 scroll-mt-50"
               >
                 <div className="flex flex-col gap-1">
