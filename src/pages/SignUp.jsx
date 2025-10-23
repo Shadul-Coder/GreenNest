@@ -70,7 +70,7 @@ const SignUp = () => {
     <div className="max-w-7xl w-[95%] my-9 mx-auto space-y-7 sm:my-13 lg:mb-29 lg:w-[97%] lg:flex lg:items-center lg:gap-7">
       <div className="text-center space-y-3 lg:text-start lg:ml-11">
         <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
-          Join the <span className="text-[#348e38]">GreenNest</span>
+          Join the <span className="text-green-600">GreenNest</span>
           <br />
           Community
         </h1>
@@ -81,7 +81,7 @@ const SignUp = () => {
       </div>
       <div className="bg-[#e7f6e9] w-[93%] mx-auto px-9 py-7 rounded-3xl sm:max-w-[430px] lg:mr-11">
         <form onSubmit={handleSubmit} className="flex flex-col gap-1.5">
-          <h3 className="text-xl text-center mb-3 font-bold text-[#348e38]">
+          <h3 className="text-xl text-center mb-3 font-bold text-green-600">
             Register
           </h3>
           <div className="flex flex-col gap-1">
@@ -142,7 +142,7 @@ const SignUp = () => {
           </div>
           <p className="text-[13px] text-black">
             Already have an account? Please{" "}
-            <Link className="text-[#348e38] underline" to={"/login"}>
+            <Link className="text-green-600 underline" to={"/login"}>
               LogIn
             </Link>
           </p>
@@ -153,7 +153,7 @@ const SignUp = () => {
           <input
             type="submit"
             value="Register"
-            className="bg-linear-to-r from-[#4db42d] to-[#348e38] text-white btn mt-3 rounded-xl"
+            className="bg-linear-to-r from-green-500 to-green-600 text-white btn mt-3 rounded-xl"
           />
         </form>
         {error && <p className="text-red-500 mt-3 text-center">{error}</p>}

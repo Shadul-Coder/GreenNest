@@ -7,5 +7,13 @@ body {
 }
 
 nav a.active {
-  @apply bg-[#e7f6e9] text-[#348e38];
+  @apply bg-[#e7f6e9] text-green-600;
+}
+
+.round1 {
+  border-radius: 30px 10px 30px 30px;
+}
+
+.round2 {
+  border-radius: 30px 30px 30px 10px;
 }

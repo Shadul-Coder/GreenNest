@@ -16,15 +16,15 @@ const Navbar = () => {
       <nav className="max-w-7xl mx-auto py-3.5 w-[95%] flex justify-between items-center lg:w-[97%]">
         <div className="flex items-center gap-3">
           <img className="h-[50px] sm:h-[55px]" src="/Logo.png" alt="" />
-          <h1 className="text-xl text-[#348e38] font-bold sm:text-2xl">
+          <h1 className="text-xl text-green-600 font-bold sm:text-2xl">
             GreenNest
           </h1>
         </div>
-        <div className="hidden lg:bg-linear-to-r lg:from-[#4db42d] lg:to-[#348e38] lg:px-1.5 lg:py-1.5 lg:rounded-full lg:flex lg:gap-1.5 lg:text-white lg:font-semibold">
+        <div className="hidden lg:bg-linear-to-r lg:from-green-500 lg:to-green-600 lg:px-1.5 lg:py-1.5 lg:rounded-full lg:flex lg:gap-1.5 lg:text-white lg:font-semibold">
           <NavLink
             to={"/"}
             className={
-              "px-5 py-3 rounded-full transition-all hover:bg-[#e7f6e9] hover:text-[#348e38]"
+              "px-5 py-3 rounded-full transition-all hover:bg-[#e7f6e9] hover:text-green-600"
             }
           >
             Home
@@ -32,7 +32,7 @@ const Navbar = () => {
           <NavLink
             to={"/plants"}
             className={
-              "px-5 py-3 rounded-full transition-all hover:bg-[#e7f6e9] hover:text-[#348e38]"
+              "px-5 py-3 rounded-full transition-all hover:bg-[#e7f6e9] hover:text-green-600"
             }
           >
             Plants
@@ -40,7 +40,7 @@ const Navbar = () => {
           <NavLink
             to={"/profile"}
             className={
-              "px-5 py-3 rounded-full transition-all hover:bg-[#e7f6e9] hover:text-[#348e38]"
+              "px-5 py-3 rounded-full transition-all hover:bg-[#e7f6e9] hover:text-green-600"
             }
           >
             My Profile
@@ -52,7 +52,7 @@ const Navbar = () => {
               <div className="dropdown dropdown-end">
                 <div tabIndex={0} role="button">
                   {user.photoURL ? (
-                    <div className="h-[50px] w-[50px] border border-[#4db42d] rounded-full cursor-pointer overflow-hidden">
+                    <div className="h-[50px] w-[50px] border border-green-500 rounded-full cursor-pointer overflow-hidden">
                       <img
                         className="h-full w-full object-cover"
                         src={user.photoURL}
@@ -60,7 +60,7 @@ const Navbar = () => {
                       />
                     </div>
                   ) : (
-                    <FaCircleUser className="text-[50px] text-[#348e38] cursor-pointer" />
+                    <FaCircleUser className="text-[50px] text-green-600 cursor-pointer" />
                   )}
                 </div>
                 <div
@@ -71,7 +71,7 @@ const Navbar = () => {
                     <h3 className="font-semibold">{user.displayName}</h3>
                     <button
                       onClick={handleSignOut}
-                      className="btn bg-[#348e38] text-white rounded-full"
+                      className="btn bg-green-600 text-white rounded-full"
                     >
                       Logout
                     </button>
@@ -83,13 +83,13 @@ const Navbar = () => {
             <>
               <Link
                 to={"/login"}
-                className="btn p-5.5 bg-[#e7f6e9] text-[#348e38] border-[#348e38] rounded-full"
+                className="btn p-5.5 bg-[#e7f6e9] text-green-600 border-green-600 round1"
               >
                 Login
               </Link>
               <Link
                 to={"/register"}
-                className="btn p-5.5 bg-[#348e38] text-white rounded-full"
+                className="btn p-5.5 bg-green-600 text-white round2"
               >
                 Register
               </Link>
@@ -124,7 +124,7 @@ const Navbar = () => {
                       alt=""
                     />
                   ) : (
-                    <FaCircleUser className="text-[70px] text-[#348e38]" />
+                    <FaCircleUser className="text-[70px] text-green-600" />
                   )}
                 </div>
                 <h3 className="font-semibold">{user.displayName}</h3>
@@ -133,19 +133,19 @@ const Navbar = () => {
             <div className="flex flex-col gap-1.5 sm:gap-2">
               <Link
                 to={"/"}
-                className="bg-white px-5 py-3 rounded-full flex items-center gap-1 active:bg-[#348e38] active:text-white"
+                className="bg-white px-5 py-3 rounded-full flex items-center gap-1 active:bg-green-600 active:text-white"
               >
                 <IoHome /> Home
               </Link>
               <Link
                 to={"/plants"}
-                className="bg-white px-5 py-3 rounded-full flex items-center gap-1 active:bg-[#348e38] active:text-white"
+                className="bg-white px-5 py-3 rounded-full flex items-center gap-1 active:bg-green-600 active:text-white"
               >
                 <GiTreeBranch /> Plants
               </Link>
               <Link
                 to={"/profile"}
-                className="bg-white px-5 py-3 rounded-full flex items-center gap-1 active:bg-[#348e38] active:text-white"
+                className="bg-white px-5 py-3 rounded-full flex items-center gap-1 active:bg-green-600 active:text-white"
               >
                 <CgProfile /> My Profile
               </Link>
@@ -154,7 +154,7 @@ const Navbar = () => {
               {user ? (
                 <button
                   onClick={handleSignOut}
-                  className="btn w-[188px] bg-[#348e38] text-white rounded-full sm:w-[268px]"
+                  className="btn w-[188px] bg-green-600 text-white rounded-full sm:w-[268px]"
                 >
                   Logout
                 </button>
@@ -162,13 +162,13 @@ const Navbar = () => {
                 <>
                   <Link
                     to={"/login"}
-                    className="btn p-5.5 w-[188px] bg-[#e7f6e9] text-[#348e38] border-[#348e38] rounded-full sm:w-[268px]"
+                    className="btn p-5.5 w-[188px] bg-[#e7f6e9] text-green-600 border-green-600 rounded-full sm:w-[268px]"
                   >
                     Login
                   </Link>
                   <Link
                     to={"/register"}
-                    className="btn p-5.5 w-[188px] bg-[#348e38] text-white rounded-full sm:w-[268px]"
+                    className="btn p-5.5 w-[188px] bg-green-600 text-white rounded-full sm:w-[268px]"
                   >
                     Register
                   </Link>

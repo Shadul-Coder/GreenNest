@@ -31,7 +31,7 @@ const ForgetPass = () => {
     <div className="max-w-7xl w-[95%] my-9 mx-auto sm:my-13 lg:mb-29 lg:w-[97%]">
       <div className="bg-[#e7f6e9] w-[93%] mx-auto px-9 py-7 rounded-3xl sm:max-w-[430px]">
         <form onSubmit={handleForgetPass} className="flex flex-col gap-1.5">
-          <h3 className="text-xl text-center mb-3 font-bold text-[#348e38]">
+          <h3 className="text-xl text-center mb-3 font-bold text-green-600">
             Forget Password
           </h3>
           <div className="flex flex-col gap-1">
@@ -49,7 +49,7 @@ const ForgetPass = () => {
           <input
             type="submit"
             value="Get Mail"
-            className="bg-linear-to-r from-[#4db42d] to-[#348e38] text-white btn mt-3 rounded-xl"
+            className="bg-linear-to-r from-green-500 to-green-600 text-white btn mt-3 rounded-xl"
           />
         </form>
         {error && <p className="text-red-500 mt-3 text-center">{error}</p>}

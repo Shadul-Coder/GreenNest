@@ -50,7 +50,7 @@ const SignIn = () => {
         <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
           Welcome Back to
           <br />
-          <span className="text-[#348e38]">GreenNest</span>
+          <span className="text-green-600">GreenNest</span>
         </h1>
         <p className="sm:text-lg sm:w-[70%] sm:mx-auto lg:mx-0 lg:w-[77%]">
           Let’s continue your journey to a greener home — sign in to explore,
@@ -59,7 +59,7 @@ const SignIn = () => {
       </div>
       <div className="bg-[#e7f6e9] w-[93%] mx-auto px-9 py-7 rounded-3xl sm:max-w-[430px] lg:mr-11">
         <form onSubmit={handleSubmit} className="flex flex-col gap-1.5">
-          <h3 className="text-xl text-center mb-3 font-bold text-[#348e38]">
+          <h3 className="text-xl text-center mb-3 font-bold text-green-600">
             Login
           </h3>
           <div className="flex flex-col gap-1">
@@ -94,19 +94,19 @@ const SignIn = () => {
               </button>
             </div>
           </div>
-          <Link to={"/forgot-password"} className="text-[#348e38] text-[13px]">
+          <Link to={"/forgot-password"} className="text-green-600 text-[13px]">
             Forget Password?
           </Link>
           <p className="text-[13px] text-black">
             New to our website? Please{" "}
-            <Link className="text-[#348e38] underline" to={"/register"}>
+            <Link className="text-green-600 underline" to={"/register"}>
               Register
             </Link>
           </p>
           <input
             type="submit"
             value="Log In"
-            className="bg-linear-to-r from-[#4db42d] to-[#348e38] text-white btn mt-3 rounded-xl"
+            className="bg-linear-to-r from-green-500 to-green-600 text-white btn mt-3 rounded-xl"
           />
         </form>
         <div className="flex items-center gap-3 mt-4">
