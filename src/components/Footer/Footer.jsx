@@ -12,20 +12,20 @@ const Footer = () => {
   return (
     <div className="relative max-w-7xl w-[95%] mx-auto lg:w-[97%]">
       <div className="hidden lg:absolute lg:-top-16 lg:w-full lg:flex lg:gap-5">
-        <div className="bg-[#348e38] flex-2 rounded-3xl flex justify-center items-center gap-3">
+        <div className="bg-linear-to-r from-[#348e38] to-[#4db42d] flex-3 rounded-3xl flex justify-center items-center gap-3">
           <img className="h-[90px]" src={logo} alt="" />
           <h1 className="text-2xl font-bold">GreenNest</h1>
         </div>
-        <div className="bg-[#e8f5e9] text-[#0f4229] min-h-[130px] px-9 rounded-3xl flex-3 flex justify-between gap-5">
-          <div className="flex gap-3 items-center text-[#348e38] font-semibold">
+        <div className="bg-[#e8f5e9] text-[#0f4229] min-h-[130px] px-13 rounded-3xl flex-7 flex justify-between gap-5">
+          <div className="flex gap-3 items-center text-[#348e38] text-lg font-semibold">
             <FaLocationDot className="text-xl" />
             <h5>Mirpur, Dhaka</h5>
           </div>
-          <div className="flex gap-3 items-center text-[#348e38] font-semibold">
+          <div className="flex gap-3 items-center text-[#348e38] text-lg font-semibold">
             <IoIosCall className="text-2xl" />
             <h5>01990199709</h5>
           </div>
-          <div className="flex gap-3 items-center text-[#348e38] font-semibold">
+          <div className="flex gap-3 items-center text-[#348e38] text-lg font-semibold">
             <IoMdMail className="text-2xl" />
             <h5>greennest@gmail.com</h5>
           </div>

@@ -2,10 +2,13 @@ import { Outlet } from "react-router";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import bg from "../assets/Footer-Bg.png";
+import { Toaster } from "react-hot-toast";
+import ScrollToTop from "../utility/ScrollToTop";
 
 const Root = () => {
   return (
     <>
+      <ScrollToTop />
       <header>
         <Navbar />
       </header>
@@ -23,6 +26,7 @@ const Root = () => {
           © 2025 GreenNest. All rights reserved.
         </small>
       </footer>
+      <Toaster position="top-right" reverseOrder={false} />
     </>
   );
 };

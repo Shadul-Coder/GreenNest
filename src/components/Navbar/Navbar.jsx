@@ -11,7 +11,6 @@ const Navbar = () => {
   const handleSignOut = () => {
     signOutuser().then().catch();
   };
-  console.log(user);
   return (
     <>
       <nav className="max-w-7xl mx-auto py-3.5 w-[95%] flex justify-between items-center lg:w-[97%]">
@@ -21,7 +20,7 @@ const Navbar = () => {
             GreenNest
           </h1>
         </div>
-        <div className="hidden lg:bg-[#348e38] lg:px-1.5 lg:py-1.5 lg:rounded-full lg:flex lg:gap-1.5 lg:text-white lg:font-semibold">
+        <div className="hidden lg:bg-linear-to-r lg:from-[#4db42d] lg:to-[#348e38] lg:px-1.5 lg:py-1.5 lg:rounded-full lg:flex lg:gap-1.5 lg:text-white lg:font-semibold">
           <NavLink
             to={"/"}
             className={
@@ -53,7 +52,7 @@ const Navbar = () => {
               <div className="dropdown dropdown-end">
                 <div tabIndex={0} role="button">
                   {user.photoURL ? (
-                    <div className="h-[50px] w-[50px] border-2 border-[#348e38] rounded-full cursor-pointer overflow-hidden">
+                    <div className="h-[50px] w-[50px] border border-[#4db42d] rounded-full cursor-pointer overflow-hidden">
                       <img
                         className="h-full w-full object-cover"
                         src={user.photoURL}

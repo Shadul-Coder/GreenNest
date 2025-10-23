@@ -5,9 +5,11 @@ import {
   GithubAuthProvider,
   GoogleAuthProvider,
   onAuthStateChanged,
+  sendPasswordResetEmail,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updatePassword,
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../firebase/firebase.config";
@@ -39,6 +41,9 @@ const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+  const passwordReset = (email) => {
+    return sendPasswordResetEmail(auth, email);
+  };
   const signOutuser = () => {
     setLoading(true);
     return signOut(auth);
@@ -52,6 +57,7 @@ const AuthProvider = ({ children }) => {
     createEmailPass,
     update,
     signinEmailPass,
+    passwordReset,
     signOutuser,
   };
   return (
