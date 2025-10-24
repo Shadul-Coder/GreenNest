@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import Profile from "../pages/Profile";
 import ForgetPass from "../pages/ForgetPass";
 import Error404 from "../pages/Error404";
+import Cart from "../pages/Cart";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <Profile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "cart",
+        element: (
+          <PrivateRoute>
+            <Cart />
           </PrivateRoute>
         ),
       },

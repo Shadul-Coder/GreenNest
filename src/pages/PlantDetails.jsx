@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Loading from "../components/Loading/Loading";
 import bg from "../assets/Consultation-Form-Bg.png";
@@ -13,8 +13,11 @@ import {
 } from "react-icons/fa";
 import toast from "react-hot-toast";
 import NotFound from "../components/Error/NotFound";
+import AuthContext from "../context/AuthContext";
+import FAQ from "../components/FAQ/FAQ";
 
 const PlantDetails = () => {
+  const { cart, setCart } = use(AuthContext);
   const { plantId } = useParams();
   const [plant, setPlant] = useState(null);
   const [error, setError] = useState("");
@@ -43,6 +46,19 @@ const PlantDetails = () => {
     image,
     providerName,
   } = plant;
+  const handleAddToCart = () => {
+    let index = cart.findIndex((plant) => plant.plantId === plantId);
+    if (index !== -1) {
+      const newCart = [...cart];
+      newCart[index].quantity++;
+      setCart(newCart);
+      toast.success("Item Added To Cart");
+    } else {
+      const newProduct = { ...plant, quantity: 1 };
+      setCart([...cart, newProduct]);
+      toast.success("Item Added To Cart");
+    }
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -126,7 +142,10 @@ const PlantDetails = () => {
                 <p className="text-sm text-gray-500 mt-1">Tax included</p>
               </div>
               <div className="sm:flex items-center gap-3">
-                <button className="flex items-center btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-2xl transition-all hover:scale-101 md:text-lg md:p-6">
+                <button
+                  onClick={handleAddToCart}
+                  className="flex items-center btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-2xl transition-all hover:scale-101 md:text-lg md:p-6"
+                >
                   <FaShoppingCart /> Add to Cart
                 </button>
                 <button
@@ -140,7 +159,7 @@ const PlantDetails = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#348e38] lg:mb-29">
+      <div className="bg-[#348e38]">
         <div
           style={{
             backgroundImage: `url(${bg})`,
@@ -210,6 +229,9 @@ const PlantDetails = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="max-w-7xl w-[95%] mx-auto mt-10 mb-9 sm:mt-11 sm:mb-13 md:mt-13 lg:mt-15 lg:mb-29 lg:w-[97%]">
+        <FAQ />
       </div>
     </>
   );

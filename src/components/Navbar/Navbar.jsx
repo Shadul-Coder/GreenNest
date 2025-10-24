@@ -1,13 +1,16 @@
 import { use } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import AuthContext from "../../context/AuthContext";
 import { CgMenuRightAlt, CgProfile } from "react-icons/cg";
 import { IoHome } from "react-icons/io5";
 import { GiTreeBranch } from "react-icons/gi";
 import { FaCircleUser } from "react-icons/fa6";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import { FiLogOut } from "react-icons/fi";
 
 const Navbar = () => {
-  const { user, signOutuser } = use(AuthContext);
+  const { cart, user, signOutuser } = use(AuthContext);
+  const navigate = useNavigate();
   const handleSignOut = () => {
     signOutuser().then().catch();
   };
@@ -53,32 +56,62 @@ const Navbar = () => {
         <div className="hidden lg:flex lg:gap-3">
           {user ? (
             <>
-              <div className="dropdown dropdown-end">
-                <div tabIndex={0} role="button">
-                  {user.photoURL ? (
-                    <div className="h-[50px] w-[50px] border border-green-500 rounded-full cursor-pointer overflow-hidden">
-                      <img
-                        className="h-full w-full object-cover"
-                        src={user.photoURL}
-                        alt=""
-                      />
-                    </div>
-                  ) : (
-                    <FaCircleUser className="text-[50px] text-green-600 cursor-pointer" />
-                  )}
+              <div className="flex items-center gap-5">
+                <div className="relative">
+                  <MdOutlineShoppingCart
+                    onClick={() => navigate("/cart")}
+                    className="text-[30px] text-green-600 cursor-pointer"
+                  />
+                  <div
+                    className={`${
+                      cart.length === 0 ? "hidden" : "inline-grid"
+                    } absolute -top-1 -right-1 *:[grid-area:1/1]`}
+                  >
+                    <div className="status status-success animate-ping"></div>
+                    <div className="status status-success"></div>
+                  </div>
                 </div>
-                <div
-                  tabIndex="-1"
-                  className="dropdown-content bg-[#e7f6e9] mt-1.5 p-5 rounded-tr-lg rounded-4xl z-30 w-55 shadow"
-                >
-                  <div className="flex flex-col gap-3">
-                    <h3 className="font-semibold">{user.displayName}</h3>
-                    <button
-                      onClick={handleSignOut}
-                      className="btn bg-green-600 text-white rounded-full"
-                    >
-                      Logout
-                    </button>
+                <div className="dropdown dropdown-end">
+                  <div tabIndex={0} role="button">
+                    {user.photoURL ? (
+                      <div className="h-[50px] w-[50px] border border-green-500 rounded-full cursor-pointer overflow-hidden">
+                        <img
+                          className="h-full w-full object-cover"
+                          src={user.photoURL}
+                          alt=""
+                        />
+                      </div>
+                    ) : (
+                      <FaCircleUser className="text-[50px] text-green-600 cursor-pointer" />
+                    )}
+                  </div>
+                  <div
+                    tabIndex="-1"
+                    className="dropdown-content bg-white border border-gray-100 mt-1.5 rounded-xl z-30 w-77 shadow-lg"
+                  >
+                    <div className="flex items-center gap-3 p-4 border-b border-gray-100">
+                      <div className="h-[45px] w-[45px] rounded-full overflow-hidden">
+                        <img
+                          src={user.photoURL}
+                          alt="Profile"
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <p className="font-semibold text-gray-800">
+                          {user.displayName}
+                        </p>
+                        <p className="text-sm text-gray-500">{user.email}</p>
+                      </div>
+                    </div>
+                    <div className="p-2 text-sm text-gray-700">
+                      <button
+                        onClick={handleSignOut}
+                        className="btn btn-ghost w-full rounded-lg flex items-center gap-2 text-red-500"
+                      >
+                        <FiLogOut /> Log out
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -100,7 +133,23 @@ const Navbar = () => {
             </>
           )}
         </div>
-        <div className="lg:hidden">
+        <div className="flex items-center gap-5 lg:hidden">
+          {user && (
+            <div className="relative">
+              <MdOutlineShoppingCart
+                onClick={() => navigate("/cart")}
+                className="text-[23px] text-green-600 cursor-pointer sm:text-[25px]"
+              />
+              <div
+                className={`${
+                  cart.length === 0 ? "hidden" : "inline-grid"
+                } absolute -top-1 -right-1 *:[grid-area:1/1]`}
+              >
+                <div className="status status-success animate-ping"></div>
+                <div className="status status-success"></div>
+              </div>
+            </div>
+          )}
           <label
             htmlFor="my-drawer"
             className="text-[27px] sm:text-[30px] lg:hidden"

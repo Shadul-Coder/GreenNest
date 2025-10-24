@@ -3,6 +3,8 @@ import TopRated from "../components/TopRated/TopRated";
 import PlantCare from "../components/PlantCare/PlantCare";
 import ExpertTeam from "../components/ExpertTeam/ExpertTeam";
 import FAQ from "../components/FAQ/FAQ";
+import EcoDecor from "../components/EcoDecor/EcoDecor";
+import Review from "../components/Review/Review";
 
 const Home = () => {
   return (
@@ -11,6 +13,8 @@ const Home = () => {
       <TopRated />
       <PlantCare />
       <ExpertTeam />
+      <EcoDecor />
+      <Review />
       <FAQ />
     </div>
   );

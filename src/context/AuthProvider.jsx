@@ -17,6 +17,7 @@ import { auth } from "../firebase/firebase.config";
 const googleProvider = new GoogleAuthProvider();
 
 const AuthProvider = ({ children }) => {
+  const [cart, setCart] = useState([]);
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -49,6 +50,8 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
   const authInfo = {
+    cart,
+    setCart,
     user,
     setUser,
     loading,

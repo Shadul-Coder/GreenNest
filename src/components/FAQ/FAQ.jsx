@@ -42,16 +42,20 @@ const FAQ = () => {
           about caring for your plants and using GreenNest.
         </p>
       </div>
-      {faq.map((que) => (
-        <div
-          key={que.id}
-          className="collapse collapse-plus bg-base-100 border border-base-300"
-        >
-          <input type="radio" name="my-accordion-3" defaultChecked />
-          <div className="collapse-title font-semibold">{que.question}</div>
-          <div className="collapse-content text-sm">{que.answer}</div>
-        </div>
-      ))}
+      <div className="space-y-1.5 md:space-y-3">
+        {faq.map((que) => (
+          <div
+            key={que.id}
+            className="collapse collapse-plus bg-green-50/50 border border-green-400"
+          >
+            <input type="radio" name="my-accordion-3" defaultChecked />
+            <div className="collapse-title font-semibold">{que.question}</div>
+            <div className="collapse-content text-gray-500 text-sm">
+              {que.answer}
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

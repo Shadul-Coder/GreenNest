@@ -1,12 +1,12 @@
 import { useLoaderData } from "react-router";
-import PlantBox from "../components/Plants/PlantBox";
+import PlantBox from "../components/PlantBox/PlantBox";
 
 const Plants = () => {
   const { data } = useLoaderData();
   return (
     <div className="max-w-7xl w-[95%] mx-auto my-9 sm:my-13 lg:w-[97%] lg:mb-29">
       <div className="text-center space-y-3 md:space-y-5">
-        <h1 className="text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl">
+        <h1 className="text-2xl font-bold sm:text-3xl md:text-4xl">
           Discover Your Next
           <br />
           <span className="text-green-600">Green</span> Friend

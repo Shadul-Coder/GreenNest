@@ -3,6 +3,7 @@ import AuthContext from "../context/AuthContext";
 import { FaEdit } from "react-icons/fa";
 import { auth } from "../firebase/firebase.config";
 import toast from "react-hot-toast";
+import userPhoto from "../assets/User.png";
 
 const Profile = () => {
   const { user, setUser, update } = use(AuthContext);
@@ -40,11 +41,19 @@ const Profile = () => {
         <div className="lg:flex lg:space-x-12">
           <div className="lg:w-1/3 flex flex-col items-center pb-8 lg:pb-0 lg:pr-8 lg:border-r lg:border-green-300">
             <div className="w-32 h-32 rounded-full overflow-hidden ring-4 ring-offset-4 ring-green-500 mb-4 shadow-xl transition-all duration-300 hover:scale-105 sm:w-40 sm:h-40">
-              <img
-                className="h-full w-full object-cover"
-                src={photoURL}
-                alt=""
-              />
+              {photoURL ? (
+                <img
+                  className="h-full w-full object-cover"
+                  src={photoURL}
+                  alt=""
+                />
+              ) : (
+                <img
+                  className="h-full w-full object-cover"
+                  src={userPhoto}
+                  alt=""
+                />
+              )}
             </div>
             <h3 className="text-center font-bold text-xl text-green-900 mt-2 sm:text-2xl">
               {displayName}

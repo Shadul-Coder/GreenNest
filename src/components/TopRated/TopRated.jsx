@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
-import PlantBox from "../Plants/PlantBox";
+import PlantBox from "../PlantBox/PlantBox";
 import Loading from "../Loading/Loading";
 
 const TopRated = () => {
