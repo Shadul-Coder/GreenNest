@@ -46,7 +46,11 @@ const SignIn = () => {
   };
   return (
     <div className="max-w-7xl w-[95%] my-9 mx-auto space-y-7 sm:my-13 lg:mb-29 lg:w-[97%] lg:flex lg:items-center lg:gap-7">
-      <div className="text-center space-y-3 lg:text-start lg:ml-11">
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        className="text-center space-y-3 lg:text-start lg:ml-11"
+      >
         <h1 className="text-3xl font-bold sm:text-4xl lg:text-5xl">
           Welcome Back to
           <br />
@@ -57,7 +61,11 @@ const SignIn = () => {
           care, and grow together.
         </p>
       </div>
-      <div className="bg-[#e7f6e9] w-[93%] mx-auto px-9 py-7 rounded-3xl sm:max-w-[430px] lg:mr-11">
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        className="bg-[#e7f6e9] w-[93%] mx-auto px-9 py-7 rounded-3xl sm:max-w-[430px] lg:mr-11"
+      >
         <form onSubmit={handleSubmit} className="flex flex-col gap-1.5">
           <h3 className="text-xl text-center mb-3 font-bold text-green-600">
             Login

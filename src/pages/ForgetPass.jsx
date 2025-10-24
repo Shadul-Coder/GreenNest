@@ -29,7 +29,11 @@ const ForgetPass = () => {
   };
   return (
     <div className="max-w-7xl w-[95%] my-9 mx-auto sm:my-13 lg:mb-29 lg:w-[97%]">
-      <div className="bg-[#e7f6e9] w-[93%] mx-auto px-9 py-7 rounded-3xl sm:max-w-[430px]">
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="1000"
+        className="bg-[#e7f6e9] w-[93%] mx-auto px-9 py-7 rounded-3xl sm:max-w-[430px]"
+      >
         <form onSubmit={handleForgetPass} className="flex flex-col gap-1.5">
           <h3 className="text-xl text-center mb-3 font-bold text-green-600">
             Forget Password

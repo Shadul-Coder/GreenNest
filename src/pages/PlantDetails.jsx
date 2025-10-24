@@ -142,7 +142,11 @@ const PlantDetails = () => {
           className="bg-cover"
         >
           <div className="max-w-7xl w-[95%] mx-auto py-13 space-y-5 sm:py-15 sm:space-y-7 md:py-17 md:space-y-9 lg:py-23 lg:w-[97%] lg:flex lg:justify-evenly lg:items-center">
-            <div className="space-y-1.5 md:space-y-3">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              className="space-y-1.5 md:space-y-3"
+            >
               <h1 className="text-center text-white text-2xl font-bold sm:text-3xl md:text-4xl lg:text-5xl lg:text-start">
                 Book a Plant Care
                 <br />
@@ -152,7 +156,11 @@ const PlantDetails = () => {
                 Get expert advice to keep your plant thriving.
               </p>
             </div>
-            <div className="bg-[#e7f6e9] w-[93%] mx-auto px-9 py-7 rounded-3xl sm:max-w-[430px] lg:mx-0">
+            <div
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+              className="bg-[#e7f6e9] w-[93%] mx-auto px-9 py-7 rounded-3xl sm:max-w-[430px] lg:mx-0"
+            >
               <h3 className="text-xl text-center mb-3 font-bold text-green-600">
                 Your Details
               </h3>

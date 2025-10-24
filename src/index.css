@@ -17,3 +17,12 @@ nav a.active {
 .round2 {
   border-radius: 30px 30px 30px 10px;
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #38a169 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #38a169 !important;
+}

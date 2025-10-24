@@ -20,7 +20,11 @@ const Navbar = () => {
             GreenNest
           </h1>
         </div>
-        <div className="hidden lg:bg-linear-to-r lg:from-green-500 lg:to-green-600 lg:px-1.5 lg:py-1.5 lg:rounded-full lg:flex lg:gap-1.5 lg:text-white lg:font-semibold">
+        <div
+          data-aos="fade-down"
+          data-aos-duration="1000"
+          className="hidden lg:bg-linear-to-r lg:from-green-500 lg:to-green-600 lg:px-1.5 lg:py-1.5 lg:rounded-full lg:flex lg:gap-1.5 lg:text-white lg:font-semibold"
+        >
           <NavLink
             to={"/"}
             className={
@@ -65,7 +69,7 @@ const Navbar = () => {
                 </div>
                 <div
                   tabIndex="-1"
-                  className="dropdown-content bg-[#e7f6e9] mt-1.5 p-5 rounded-tr-lg rounded-4xl z-1 w-55 shadow"
+                  className="dropdown-content bg-[#e7f6e9] mt-1.5 p-5 rounded-tr-lg rounded-4xl z-30 w-55 shadow"
                 >
                   <div className="flex flex-col gap-3">
                     <h3 className="font-semibold">{user.displayName}</h3>

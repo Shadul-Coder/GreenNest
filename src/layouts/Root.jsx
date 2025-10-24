@@ -4,6 +4,10 @@ import Footer from "../components/Footer/Footer";
 import bg from "../assets/Footer-Bg.png";
 import { Toaster } from "react-hot-toast";
 import ScrollToTop from "../utility/ScrollToTop";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const Root = () => {
   return (

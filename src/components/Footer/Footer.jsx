@@ -12,11 +12,19 @@ const Footer = () => {
   return (
     <div className="relative max-w-7xl w-[95%] mx-auto lg:w-[97%]">
       <div className="hidden lg:absolute lg:-top-16 lg:w-full lg:flex lg:gap-5">
-        <div className="bg-linear-to-r from-green-600 to-green-500 flex-3 rounded-3xl flex justify-center items-center gap-3">
+        <div
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          className="bg-linear-to-r from-green-600 to-green-500 flex-3 rounded-3xl flex justify-center items-center gap-3"
+        >
           <img className="h-[90px]" src={logo} alt="" />
           <h1 className="text-2xl font-bold">GreenNest</h1>
         </div>
-        <div className="bg-[#e8f5e9] text-[#0f4229] min-h-[130px] px-13 rounded-3xl flex-7 flex justify-between gap-5">
+        <div
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          className="bg-[#e8f5e9] text-[#0f4229] min-h-[130px] px-13 rounded-3xl flex-7 flex justify-between gap-5"
+        >
           <div className="flex gap-3 items-center text-green-600 text-lg font-semibold">
             <FaLocationDot className="text-xl" />
             <h5>Mirpur, Dhaka</h5>
