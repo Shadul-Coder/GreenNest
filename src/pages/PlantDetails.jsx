@@ -12,19 +12,25 @@ import {
   FaCalendarAlt,
 } from "react-icons/fa";
 import toast from "react-hot-toast";
+import NotFound from "../components/Error/NotFound";
 
 const PlantDetails = () => {
   const { plantId } = useParams();
   const [plant, setPlant] = useState(null);
   const [error, setError] = useState("");
+  const [notFound, setNotFound] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios("/plants.json");
       const current = res.data.find((p) => p.plantId === plantId);
+      if (!current) {
+        setNotFound(true);
+      }
       setPlant(current);
     };
     fetchData();
   }, [plantId]);
+  if (notFound) return <NotFound />;
   if (!plant) return <Loading />;
   const {
     plantName,

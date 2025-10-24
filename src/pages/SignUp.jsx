@@ -25,8 +25,7 @@ const SignUp = () => {
     const namePattern = /^[A-Za-z]+(?: [A-Za-z]+)*$/;
     const urlPattern = /^https:\/\/([\w\-]+\.)+[a-zA-Z]{2,}(\/[^\s]*)?$/;
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    const passwordPattern =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const passwordPattern = /^(?=.*[A-Z])(?=.*[a-z]).{6,}$/;
     if (!namePattern.test(name)) {
       setError("Please enter a valid name.");
       return;
@@ -41,7 +40,7 @@ const SignUp = () => {
     }
     if (!passwordPattern.test(password)) {
       setError(
-        "Password must be at least 8 characters long and include uppercase, lowercase, number, and special character."
+        "Password must be at least 6 characters with uppercase and lowercase letters."
       );
       return;
     }

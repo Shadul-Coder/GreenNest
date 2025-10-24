@@ -10,11 +10,13 @@ import SignIn from "../pages/SignIn";
 import PrivateRoute from "./PrivateRoute";
 import Profile from "../pages/Profile";
 import ForgetPass from "../pages/ForgetPass";
+import Error404 from "../pages/Error404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    errorElement: <Error404 />,
     children: [
       {
         index: true,
