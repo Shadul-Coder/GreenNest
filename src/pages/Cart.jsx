@@ -69,7 +69,7 @@ const Cart = () => {
               setCart(sortCart);
               setOrder(!order);
             }}
-            className="btn rounded-3xl text-green-600 bg-green-100 border border-green-600 sm:p-5 sm:text-lg lg:p-5.5"
+            className="btn rounded-3xl text-green-600 bg-green-50 border border-green-600 sm:p-5 sm:text-lg lg:p-5.5"
           >
             <div className="flex items-center gap-1.5">
               Sort by Price{" "}

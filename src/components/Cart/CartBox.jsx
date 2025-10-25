@@ -4,7 +4,7 @@ import toast from "react-hot-toast";
 const CartBox = ({ plant, removeFromCart }) => {
   const { plantId, plantName, price, quantity, description, image } = plant;
   return (
-    <div className="bg-green-100 p-3 rounded-3xl flex justify-between items-center gap-3 sm:gap-5 sm:p-5">
+    <div className="bg-green-50 p-3 rounded-3xl flex justify-between items-center gap-3 sm:gap-5 sm:p-5">
       <div className="flex items-center gap-3 sm:gap-5">
         <img
           className="h-[105px] w-[105px] rounded-2xl sm:h-[200px] sm:w-[200px]"

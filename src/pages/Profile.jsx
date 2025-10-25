@@ -28,6 +28,7 @@ const Profile = () => {
       .then(() => {
         setError("");
         setUser({ ...auth.currentUser });
+        setEdit(false);
         toast.success("Profile updated successfully!");
       })
       .catch();

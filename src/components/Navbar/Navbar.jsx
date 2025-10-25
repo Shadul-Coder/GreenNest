@@ -89,7 +89,10 @@ const Navbar = () => {
                     tabIndex="-1"
                     className="dropdown-content bg-white border border-gray-100 mt-1.5 rounded-xl z-30 w-77 shadow-lg"
                   >
-                    <div className="flex items-center gap-3 p-4 border-b border-gray-100">
+                    <div
+                      onClick={() => navigate("/profile")}
+                      className="flex items-center gap-3 p-4 border-b border-gray-100 cursor-pointer hover:bg-gray-50"
+                    >
                       <div className="h-[45px] w-[45px] rounded-full overflow-hidden">
                         <img
                           src={user.photoURL}
