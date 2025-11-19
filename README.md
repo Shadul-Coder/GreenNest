@@ -114,3 +114,71 @@ If the user is unauthenticated, they’ll be redirected to the **Login Page**, a
 | `tailwindcss` | Utility-first CSS framework |
 | `daisyui` | Tailwind UI components |
 | `@tailwindcss/vite` | Tailwind with Vite integration |
+
+
+````md
+## 🛠️ Local Setup & Run Guide
+
+Follow the steps below to run **GreenNest** on your local machine:
+
+---
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/Shadul-Coder/GreenNest.git
+cd greennest
+````
+
+---
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+---
+
+### 3️⃣ Firebase Configuration
+
+Create a `.env` file in the **root folder** and add your Firebase config:
+
+```
+VITE_apiKey=your_api_key
+VITE_authDomain=your_auth_domain
+VITE_projectId=your_project_id
+VITE_storageBucket=your_storage_bucket
+VITE_messagingSenderId=your_sender_id
+VITE_appId=your_app_id
+```
+
+Make sure your Firebase Authentication (Email/Password + Google) is enabled in the Firebase Console.
+
+---
+
+### 4️⃣ Add Local Data File
+
+Ensure the `plants.json` file exists in:
+
+```
+public/plants.json
+```
+
+This file contains all plant data used across the site.
+
+---
+
+### 5️⃣ Run the Project Locally
+
+```bash
+npm run dev
+```
+
+The app will run at:
+👉 **[http://localhost:5173](http://localhost:5173)**
+
+---
+
+### 🎉 All Set!
+
+GreenNest should now be running locally with Firebase Authentication, protected routes, plant data, and all SPA features working properly.
