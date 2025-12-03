@@ -2,7 +2,7 @@ import { FaStar } from "react-icons/fa";
 import { Link } from "react-router";
 
 const PlantBox = ({ plant }) => {
-  const { plantId, plantName, price, rating, image } = plant;
+  const { plantId, plantName, price, rating, description, image } = plant;
   return (
     <div className="rounded-2xl shadow overflow-hidden transition-all duration-300 hover:shadow-md hover:-translate-y-1">
       <div className="relative h-48 overflow-hidden sm:h-52 md:h-56 lg:60">
@@ -16,8 +16,9 @@ const PlantBox = ({ plant }) => {
           <span>{rating}</span>
         </div>
       </div>
-      <div className="p-3 flex flex-col justify-between h-25 sm:h-27 md:h-29 lg:h-31">
+      <div className="p-3 flex flex-col justify-between">
         <h3 className="text-lg font-semibold">{plantName}</h3>
+        <p className="truncate text-sm text-gray-500">{description}</p>
         <div className="flex justify-between items-center mt-3">
           <p className="text-green-600 font-bold text-sm lg:text-lg">
             ${price.toFixed(2)}

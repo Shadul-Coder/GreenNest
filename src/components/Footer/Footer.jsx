@@ -7,6 +7,7 @@ import {
 import { IoIosCall, IoMdMail } from "react-icons/io";
 import logo from "../../assets/White Logo.png";
 import { FaLocationDot } from "react-icons/fa6";
+import { Link } from "react-router";
 
 const Footer = () => {
   return (
@@ -77,24 +78,38 @@ const Footer = () => {
         <div>
           <h5 className="text-xl font-semibold mb-4">Explore</h5>
           <ul className="space-y-3 text-gray-300 text-sm">
-            <li className="cursor-pointer hover:underline">Shop Plants</li>
-            <li className="cursor-pointer hover:underline">Care Guides</li>
             <li className="cursor-pointer hover:underline">
-              Expert Consultations
+              <Link to={"/plants"}>Shop Plants</Link>
             </li>
-            <li className="cursor-pointer hover:underline">Decor Ideas</li>
-            <li className="cursor-pointer hover:underline">About GreenNest</li>
+            <li className="cursor-pointer hover:underline">
+              <a href="/#careTips">Care Guides</a>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <a href="/#experts">Expert Consultations</a>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <a href="/#ecoDecor">Decor Ideas</a>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <Link to={"/about-us"}>About GreenNest</Link>
+            </li>
           </ul>
         </div>
         <div>
           <h5 className="text-xl font-semibold mb-4">Customer Support</h5>
           <ul className="space-y-3 text-gray-300 text-sm">
             <li className="cursor-pointer hover:underline">
-              Shipping & Delivery
+              <Link to={"/contact"}>Shipping & Delivery</Link>
             </li>
-            <li className="cursor-pointer hover:underline">FAQs</li>
-            <li className="cursor-pointer hover:underline">Return Policy</li>
-            <li className="cursor-pointer hover:underline">Contact Us</li>
+            <li className="cursor-pointer hover:underline">
+              <a href="/#faq">FAQs</a>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <Link to={"/contact"}>Return Policy</Link>
+            </li>
+            <li className="cursor-pointer hover:underline">
+              <Link to={"/contact"}>Contact Us</Link>
+            </li>
           </ul>
         </div>
         <div>

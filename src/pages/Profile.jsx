@@ -70,7 +70,7 @@ const Profile = () => {
               </h2>
               <FaEdit
                 onClick={() => setEdit(!edit)}
-                className={`w-5 h-5 text-green-600`}
+                className="w-5 h-5 text-green-600 cursor-pointer"
               />
             </div>
             {!edit ? (

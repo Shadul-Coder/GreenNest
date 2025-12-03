@@ -32,7 +32,7 @@ const FAQ = () => {
     },
   ];
   return (
-    <section>
+    <section id="faq" className="scroll-mt-35">
       <div className="space-y-1.5 mb-7 sm:space-y-3 md:mb-9 lg:mb-11">
         <h2 className="text-center text-xl font-bold sm:text-2xl lg:text-3xl">
           <span className="text-green-600">Frequently</span> Asked Questions

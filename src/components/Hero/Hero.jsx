@@ -8,6 +8,7 @@ import bg2 from "../../assets/Slide 2.jpg";
 import bg3 from "../../assets/Slide 3.jpg";
 import bg4 from "../../assets/Slide 4.jpg";
 import bg5 from "../../assets/Slide 5.jpg";
+import { Link } from "react-router";
 
 const Hero = () => {
   return (
@@ -27,7 +28,7 @@ const Hero = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="bg-yellow-300 h-[330px] rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px]">
+          <div className="bg-yellow-300 h-[330px] mt-7 lg:mt-5 rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px] xl:h-[600px]">
             <div
               style={{
                 backgroundImage: `url(${bg1})`,
@@ -43,15 +44,18 @@ const Hero = () => {
                   Discover lush indoor plants that purify your air and uplift
                   your mood — naturally.
                 </p>
-                <button className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl">
+                <Link
+                  to={"/plants"}
+                  className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl"
+                >
                   Explore Plants
-                </button>
+                </Link>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-yellow-300 h-[330px] rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px]">
+          <div className="bg-yellow-300 h-[330px] mt-7 lg:mt-5 rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px] xl:h-[600px]">
             <div
               style={{
                 backgroundImage: `url(${bg2})`,
@@ -67,15 +71,18 @@ const Hero = () => {
                   From low-maintenance succulents to tropical ferns — find your
                   perfect green companion.
                 </p>
-                <button className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl">
+                <Link
+                  to={"/plants"}
+                  className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl"
+                >
                   View Collection
-                </button>
+                </Link>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-yellow-300 h-[330px] rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px]">
+          <div className="bg-yellow-300 h-[330px] mt-7 lg:mt-5 rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px] xl:h-[600px]">
             <div
               style={{
                 backgroundImage: `url(${bg3})`,
@@ -91,15 +98,18 @@ const Hero = () => {
                   Learn easy plant care routines and keep your indoor jungle
                   thriving all year round.
                 </p>
-                <button className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl">
+                <a
+                  href="#careTips"
+                  className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl"
+                >
                   Read Care Tips
-                </button>
+                </a>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-yellow-300 h-[330px] rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px]">
+          <div className="bg-yellow-300 h-[330px] mt-7 lg:mt-5 rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px] xl:h-[600px]">
             <div
               style={{
                 backgroundImage: `url(${bg4})`,
@@ -115,15 +125,18 @@ const Hero = () => {
                   Book a consultation with our green experts and get
                   personalized advice for your plants.
                 </p>
-                <button className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl">
+                <Link
+                  to={"/contact"}
+                  className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl"
+                >
                   Book Consultation
-                </button>
+                </Link>
               </div>
             </div>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-yellow-300 h-[330px] rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px]">
+          <div className="bg-yellow-300 h-[330px] mt-7 lg:mt-5 rounded-3xl overflow-hidden sm:h-[400px] md:h-[470px] lg:h-[550px] xl:h-[600px]">
             <div
               style={{
                 backgroundImage: `url(${bg5})`,
@@ -139,9 +152,12 @@ const Hero = () => {
                   Create a refreshing, eco-friendly home with plants that bring
                   life and calm to every corner.
                 </p>
-                <button className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl">
+                <a
+                  href="#ecoDecor"
+                  className="mt-2 btn bg-linear-to-r from-green-500 to-green-600 text-white rounded-xl md:text-lg md:p-6 md:rounded-2xl"
+                >
                   Get Inspired
-                </button>
+                </a>
               </div>
             </div>
           </div>

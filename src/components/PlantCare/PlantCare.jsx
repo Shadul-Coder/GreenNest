@@ -4,7 +4,7 @@ import fertilizing from "../../assets/Fertilizing.jpg";
 
 const PlantCare = () => {
   return (
-    <section>
+    <section id="careTips" className="scroll-mt-35">
       <div className="space-y-1.5 mb-7 sm:space-y-3 md:mb-9 lg:mb-11">
         <h2 className="text-center text-xl font-bold sm:text-2xl lg:text-3xl">
           <span className="text-green-600">Plants</span> Care Made Easy

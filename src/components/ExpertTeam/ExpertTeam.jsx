@@ -4,7 +4,7 @@ import member3 from "../../assets/Member 3.png";
 
 const ExpertTeam = () => {
   return (
-    <section className="">
+    <section id="experts" className="scroll-mt-35">
       <div className="space-y-1.5 mb-7 sm:space-y-3 md:mb-9 lg:mb-11">
         <h2 className="text-center text-xl font-bold sm:text-2xl lg:text-3xl">
           Meet Our <span className="text-green-600">Green</span> Experts

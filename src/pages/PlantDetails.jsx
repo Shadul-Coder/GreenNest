@@ -1,6 +1,6 @@
 import axios from "axios";
 import { use, useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import Loading from "../components/Loading/Loading";
 import bg from "../assets/Consultation-Form-Bg.png";
 import {
@@ -17,7 +17,8 @@ import AuthContext from "../context/AuthContext";
 import FAQ from "../components/FAQ/FAQ";
 
 const PlantDetails = () => {
-  const { cart, setCart } = use(AuthContext);
+  const { cart, setCart, user } = use(AuthContext);
+  const navigate = useNavigate();
   const { plantId } = useParams();
   const [plant, setPlant] = useState(null);
   const [error, setError] = useState("");
@@ -47,6 +48,9 @@ const PlantDetails = () => {
     providerName,
   } = plant;
   const handleAddToCart = () => {
+    if (!user) {
+      return navigate("/login");
+    }
     let index = cart.findIndex((plant) => plant.plantId === plantId);
     if (index !== -1) {
       const newCart = [...cart];
@@ -148,18 +152,18 @@ const PlantDetails = () => {
                 >
                   <FaShoppingCart /> Add to Cart
                 </button>
-                <button
+                <a
                   href="#consultation"
                   className="hidden sm:flex items-center btn rounded-2xl text-green-600 border border-green-600 bg-white transition-all hover:scale-101 md:text-lg md:p-6 lg:hidden xl:flex"
                 >
                   <FaCalendarAlt /> Book Consultation
-                </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#348e38]">
+      <div id="consultation" className="bg-[#348e38] scroll-mt-35">
         <div
           style={{
             backgroundImage: `url(${bg})`,

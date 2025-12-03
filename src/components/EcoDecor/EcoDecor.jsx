@@ -1,69 +1,3 @@
-// import pic1 from "../../assets/Eco Decor 1.jpg";
-// import pic2 from "../../assets/Eco Decor 2.jpg";
-// import pic3 from "../../assets/Eco Decor 3.jpg";
-// import pic4 from "../../assets/Eco Decor 4.jpg";
-
-// const EcoDecor = () => {
-//   const ideas = [
-//     {
-//       title: "Green Corners of Calm",
-//       desc: "Transform empty corners with tall indoor plants like fiddle leaf figs or monsteras. Perfect for adding height and freshness to living spaces.",
-//       img: pic1,
-//     },
-//     {
-//       title: "Kitchen Herb Haven",
-//       desc: "Line your kitchen window with small potted herbs — basil, mint, or rosemary. They add beauty and flavor to your daily cooking.",
-//       img: pic2,
-//       reverse: true,
-//     },
-//     {
-//       title: "Bedroom Oxygen Boost",
-//       desc: "Add air-purifying plants like snake plants or peace lilies near your bedside. They help you sleep better with cleaner air.",
-//       img: pic3,
-//     },
-//     {
-//       title: "Shelf of Serenity",
-//       desc: "Decorate shelves with small succulents, trailing pothos, and mini cacti for a vibrant yet minimalistic touch.",
-//       img: pic4,
-//       reverse: true,
-//     },
-//   ];
-//   return (
-//     <section>
-//       <div className="space-y-1.5 mb-7 sm:space-y-3 md:mb-9 lg:mb-11">
-//         <h2 className="text-center text-xl font-bold sm:text-2xl lg:text-3xl">
-//           <span className="text-green-600">Eco</span> Decor Ideas
-//         </h2>
-//         <p className="text-center md:w-[70%] md:mx-auto md:text-lg">
-//           Discover creative ways to style your home with plants — adding life,
-//           freshness, and calm to every corner.
-//         </p>
-//       </div>
-//       <div>
-//         {ideas.map((idea, idx) => (
-//           <div
-//             key={idx}
-//             className={`flex flex-col ${
-//               idea.reverse ? "lg:flex-row-reverse" : "lg:flex-row"
-//             } items-center`}
-//           >
-//             <div className="flex-1">
-//               <img src={idea.img} alt={idea.title} className="w-full" />
-//             </div>
-//             <div className="flex-1">
-//               <h3 className="">{idea.title}</h3>
-//               <p className="">{idea.desc}</p>
-//               <button className="btn">Learn More</button>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default EcoDecor;
-
 import { FaLeaf } from "react-icons/fa";
 import pic1 from "../../assets/Eco Decor 1.jpg";
 import pic2 from "../../assets/Eco Decor 2.jpg";
@@ -96,7 +30,7 @@ const EcoDecor = () => {
     },
   ];
   return (
-    <section>
+    <section id="ecoDecor" className="scroll-mt-35">
       <div className="space-y-1.5 mb-7 sm:space-y-3 md:mb-9 lg:mb-11">
         <h2 className="text-center text-xl font-bold sm:text-2xl lg:text-3xl">
           <span className="text-green-600">Eco</span> Decor Ideas

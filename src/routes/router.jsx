@@ -12,6 +12,8 @@ import Profile from "../pages/Profile";
 import ForgetPass from "../pages/ForgetPass";
 import Error404 from "../pages/Error404";
 import Cart from "../pages/Cart";
+import AboutUs from "../pages/AboutUs";
+import Contact from "../pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -31,11 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "plants/:plantId",
-        element: (
-          <PrivateRoute>
-            <PlantDetails />
-          </PrivateRoute>
-        ),
+        Component: PlantDetails,
       },
       {
         path: "register",
@@ -56,6 +54,14 @@ const router = createBrowserRouter([
             <Profile />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "about-us",
+        Component: AboutUs,
+      },
+      {
+        path: "contact",
+        Component: Contact,
       },
       {
         path: "cart",

@@ -13,7 +13,7 @@ const Root = () => {
   return (
     <>
       <ScrollToTop />
-      <header>
+      <header className="sticky top-0 bg-white shadow-md shadow-[#e8f5e9] z-90 sm:py-1 md:py-2 lg:py-3">
         <Navbar />
       </header>
       <main>
